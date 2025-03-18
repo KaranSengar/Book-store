@@ -1,0 +1,141 @@
+/* General Styles */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    background-color: #fff;
+    padding:30px 50px;
+    margin-bottom: 330px;
+}
+
+.logo {
+    font-size: 30px;
+    font-family: sans-serif;
+    font-weight: 700;
+    color: chocolate;
+}
+
+.list {
+    display: flex;
+    align-items: center;
+    margin-left: 270px;
+}
+
+.list ul {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.list ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.list ul li a:hover {
+    color: chocolate;
+}
+
+.search {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+.search input {
+    background-color: rgb(222, 225, 232);
+    width: 240px;
+    border-radius: 20px;
+    height: 45px;
+    padding: 21px 20px; /* Adjusted padding */
+    color: black; /* Ensure text is black */
+    font-size: 16px;
+    border: 1px solid cadetblue;
+    outline: none;
+}
+.search input::placeholder{
+    color: black
+    ;
+}
+.btn {
+    position: absolute;
+    color: black;
+    top: 15px;
+    right: 20px;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+}
+.sun{
+    font-size: 40px;
+}
+.login{
+     width: 130px;
+     height: 39px;
+     font-size: 18px;
+     border-radius: 20px;
+     padding:3px 3px;
+     background-color:chocolate;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .list ul {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        display: none; /* Hidden by default for smaller screens */
+        margin-top: 10px;
+    }
+
+    .list ul.show {
+        display: flex; /* Show menu when toggled */
+    }
+
+    .search {
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    .search input {
+        width: 100%;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        font-size: 25px;
+        color: white;
+    }
+
+    .hamburger.active + .list ul {
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .logo {
+        font-size: 24px;
+    }
+
+    .btn {
+        top: 5px;
+        right: 10px;
+        font-size: 18px;
+    }
+}
